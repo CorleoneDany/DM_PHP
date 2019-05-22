@@ -6,7 +6,7 @@ $produits = array($produit1, $produit2, $produit3);
 
 function genererListeProduits()
 {
-    foreach()
+    foreach($k as $v)
     {
         
     }
