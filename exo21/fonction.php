@@ -2,9 +2,9 @@
 function recherche($mot)
 {
 	$lenght = strlen($mot)+2; //longueur du mot + longueur de la chaîne "/n"
-	var_dump($lenght);
+	// var_dump($lenght);
 	$dico=fopen('liste_francais.txt','r');
-	var_dump($mot);
+	// var_dump($mot);
 	$liste="";
 	
 	// Debug
