@@ -41,7 +41,7 @@ function compterVisites(){
 	}
 	else{
 		$fichierOuvert=fopen('compteur.txt','w+');
-		fputs($fichierOuvert,0);
+		fputs($fichierOuvert,1);
 		fclose($fichierOuvert);
 	}
 }
