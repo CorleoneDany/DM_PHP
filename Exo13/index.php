@@ -20,10 +20,7 @@
         $produit3 = array("numero" => 3, "nom" => "Clavier", "prix" => "20 euros", "descriptif" => "Un joli clavier.");
         $produits = array($produit1, $produit2, $produit3);
 
-        foreach ($produits as $k => $v)
-        {
-            echo $k . " => " . $v . "<br/>";
-        }
+        echo $produits['produit1'];
     }
 
     genererListeProduits(); ?>
