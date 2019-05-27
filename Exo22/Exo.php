@@ -18,9 +18,10 @@
 
 <?php
 
-if(isset($_POST))
+if(!empty($_POST))
 {
 setcookie("Couleur", $_POST["Couleur"]);
 setcookie("Taille", $_POST['Taille']);
+echo " <link rel='stylesheet' type='text/css' href='./css/" . "$_POST[Couleur]".".css>'";
 }
 ?>
