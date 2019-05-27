@@ -22,6 +22,9 @@ if(!empty($_POST))
 {
 setcookie("Couleur", $_POST["Couleur"]);
 setcookie("Taille", $_POST['Taille']);
-echo " <link rel='stylesheet' type='text/css' href='./css/" . "$_POST[Couleur]".".css>'";
+// include("./css/" . "$_COOKIE['Couleur']");
+// include("./css/" . "$_COOKIE['Taille']");
+echo $_COOKIE["Couleur"];
+echo $_COOKIE["Taille"];
 }
 ?>
