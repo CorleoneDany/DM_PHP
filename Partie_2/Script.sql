@@ -10,13 +10,13 @@ CREATE TABLE emprunt(
     id_livre INT(3),
     id_abonne INT(3),
     date_sortie DATE,
-    date_rendu DATE DEFAULT NULL
+    date_rendu DATE DEFAULT NULL,
     CONSTRAINT PK_emprunt PRIMARY KEY (id_emprunt)
 );
 
 CREATE TABLE livre(
     id_livre INT(3),
     auteur VARCHAR(25),
-    titre VARCHAR(50)
+    titre VARCHAR(50),
     CONSTRAINT PK_livre PRIMARY KEY (id_livre)
 );
