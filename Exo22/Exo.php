@@ -20,10 +20,12 @@
 
 if(!empty($_POST))
 {
+    $Couleur = $_POST["Couleur"];
+    $Taille = $_POST["Taille"];
 setcookie("Couleur", $_POST["Couleur"]);
 setcookie("Taille", $_POST['Taille']);
-// include("./css/" . "$_COOKIE['Couleur']");
-// include("./css/" . "$_COOKIE['Taille']");
+include("./css/" . "$Couleur" . ".css");
+include("./css/" . "$Taille" . ".css");
 echo $_COOKIE["Couleur"];
 echo $_COOKIE["Taille"];
 }
