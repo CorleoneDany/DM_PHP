@@ -11,7 +11,9 @@ CREATE TABLE emprunt(
     id_abonne INT(3),
     date_sortie DATE,
     date_rendu DATE DEFAULT NULL,
-    CONSTRAINT PK_emprunt PRIMARY KEY (id_emprunt)
+    CONSTRAINT PK_emprunt PRIMARY KEY (id_emprunt),
+    CONSTRAINT FK_livre FOREIGN KEY (id_livre) REFERENCES livre(id_livre),
+    CONSTRAINT FK_abonne FOREIGN KEY (id_abonne) REFERENCES abonne(id_abonne)
 );
 
 CREATE TABLE livre(
