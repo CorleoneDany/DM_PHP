@@ -1,3 +1,18 @@
+<html>
+<?php
+define('CSS_PATH', './css/');
+
+if(!empty($_POST))
+{
+$Couleur = $_POST["Couleur"];
+$Taille = $_POST["Taille"];
+setcookie("Couleur", $_POST["Couleur"]);
+setcookie("Taille", $_POST['Taille']);
+echo "Visiblement, vous aimez le " . $Couleur;
+}
+?>
+<link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH . $Couleur?> ">
+<link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH . $Taille?> ">
 <form action="Exo.php" method="post">
 <label>Couleur</label><br>
 <select name="Couleur" size="1">
@@ -15,18 +30,4 @@
 
 <input type="submit" value="Sauvegarder">
 </form>
-
-<?php
-
-if(!empty($_POST))
-{
-    $Couleur = $_POST["Couleur"];
-    $Taille = $_POST["Taille"];
-setcookie("Couleur", $_POST["Couleur"]);
-setcookie("Taille", $_POST['Taille']);
-include("./css/" . "$Couleur" . ".css");
-include("./css/" . "$Taille" . ".css");
-echo $_COOKIE["Couleur"];
-echo $_COOKIE["Taille"];
-}
-?>
+</html>
