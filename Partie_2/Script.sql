@@ -25,3 +25,6 @@ CREATE TABLE livre(
   titre VARCHAR(50),
   CONSTRAINT PK_livre PRIMARY KEY (id_livre)
 );
+-- Insertion des prenoms dans la table abonné --
+INSERT INTO abonne (prenom)
+VALUES ('Guillaume'), ('Benoit'), ('Chloe'), ('Laura');
