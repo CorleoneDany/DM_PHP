@@ -20,7 +20,7 @@ CREATE TABLE emprunt(
 );
 
 CREATE TABLE livre(
-  id_livre INT(3) AUTO_INCREMENT,
+  id_livre INT(3) AUTO_INCREMENT=100,
   auteur VARCHAR(25),
   titre VARCHAR(50),
   CONSTRAINT PK_livre PRIMARY KEY (id_livre)
@@ -28,3 +28,11 @@ CREATE TABLE livre(
 -- Insertion des prenoms dans la table abonné --
 INSERT INTO abonne (prenom)
 VALUES ('Guillaume'), ('Benoit'), ('Chloe'), ('Laura');
+-- Insertion des données dans la table livre --
+INSERT INTO livre (auteur, titre)
+VALUES ('GUY DE MAUPASSANT', 'Une vie'),
+('GUY DE MAUPASSANT', 'Bel-Ami'),
+('HONORE DE BALZAC', 'Le pere Goriot'),
+('ALPHONE DAUDET', 'Le Petit Chose'),
+('ALEXANDRE DUMAS', 'La Reine Margot'),
+('ALEXANDRE DUMAS', 'Les Trois Mousquetaires');
