@@ -1,3 +1,5 @@
+-- Ajout des bases de données et des tables --
+
 CREATE DATABASE IF NOT EXISTS bibliotheque;
 USE bibliotheque;
 CREATE TABLE abonne(
