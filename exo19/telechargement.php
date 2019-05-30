@@ -1,8 +1,14 @@
 <?php
 	if(!empty($_GET['nom'])){
-	echo $_GET['nom'];
-	$fichier = "test.zip";
-	
+		echo $_GET['nom'];
+		$fichier = "document.docx";
+		if(file_exists($fichier)){
+			echo "existe";
+			$header = "Content-Disposition: attachement; fileneame=$fichier;";
+			header("Content-Type:application/msWord");
+			readfile($fichier);
+
+		}
 	}
 ?>
 
