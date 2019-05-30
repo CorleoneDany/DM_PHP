@@ -2,6 +2,7 @@
 if(!empty($_FILES)){
 	$dossier = 'galerie';
 	if(!is_dir($dossier)){
+		echo is_dir($dossier);
 		mkdir($dossier);
 	}
 	$img = $_FILES['image'];
@@ -30,6 +31,7 @@ if(!empty($_FILES)){
 		<title>DM PHP: Exercice 20</title>
 		<meta charset="utf-8">
 		<meta name="Author" content="Merwan DAGHOU">
+		<link rel="stylesheet" href="style.css"/>
 	</head>
 	<body>
 		<form method="post" action="galerie.php" enctype="multipart/form-data">
@@ -37,6 +39,29 @@ if(!empty($_FILES)){
 			<input type="file" name="image" id="image"/><br/>
 			<input type="submit" value="Ajouter l'image"/><br/><br/>
 		</form>
+
+<?php
+	$dossier= 'galerie';
+if(is_dir($dossier)){
+
+	$resdos=opendir($dossier);
+	$i=0;
+		while(false !== ($fichier = readdir($resdos)) && $i<300){
+			$i+=1;
+			if($fichier!='.' && $fichier!= '..'){
+				$fichier=$dossier."/".$fichier;
+?>
+
+		<div>
+			<img src="<?php echo $fichier; ?>"></br>
+			<p>Chemin du fichier : <?php echo $fichier; ?></p>
+		</div>
+<?php
+			}
+		}
+	}
+?>	
+		
 
 	</body>
 </html> 
