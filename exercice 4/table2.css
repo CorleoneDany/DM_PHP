@@ -1,0 +1,14 @@
+table, td, tr, th {
+    margin: 0 auto;
+    border: 1px black solid;
+    border-collapse: collapse;
+    }
+
+td {
+    width: 150px;
+    text-align: center;         
+}
+
+.photo {
+    width: 60px;
+}
