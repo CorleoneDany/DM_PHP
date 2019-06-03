@@ -1,34 +1,34 @@
 <?php
 
+
+
 function nextSuite()
 {
-    $str = '1';
+    $str = '11';
     $nextstr = '';
-
-    for ($i = 0; $i < strlen($str); $i++)
+    $i = 0;
+    while($i < strlen($str))
     {
-        if (substr($str, $i) != substr($str, $i + 1)) 
+        if (substr($str, $i) == substr($str, $i + 3)) 
         {
-            //Un caractère identique
-            $nextstr .= '1' . substr($str, $i);
+            //Trois
+            $nextstr .= '3' . substr($str, $i, 1);
+            $i = $i + 3;
+        }
+        else if (substr($str, $i) == substr($str, $i + 2)) 
+        {
+            //Deux 
+            $nextstr .= '2' . substr($str, $i, 1);
+            $i = $i + 2;
         }
         else
         {
-            if (substr($str, $i) != substr($str, $i + 2)) 
-            {
-                //Deux caractères identiques
-                $nextstr .= '2' . substr($str, $i);
-                $i++;
-            }
-            else
-            {
-                //Trois caractères identiques
-                $nextstr .= '3' . substr($str, $i);
-                $i += 2;
-            }
+            //Aucun
+            $nextstr .= '1' . substr($str, $i, 1);
+            $i = $i + 1;
         }
     }
-    echo $nextstr;
+    echo $nextstr . '<br>';
 }
 
 nextSuite();
