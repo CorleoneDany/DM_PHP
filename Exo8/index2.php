@@ -1,11 +1,11 @@
 <?php
 
-//L'exercice ne fonctionne pas, peut-être a cause de ma fonction substr qui sera négative lors de la première execution de ma boucle ?
+// L'exercice fonctionne désormais, une erreur de syntaxe était la cause du non fonctionnement ("nombre =+ 1" au lieu de "nombre += 1")
 
-$str ="21";
+$str ="145588266";
 $strRetour ="";
 
-for ($i = 0; $i < strlen($str); $i++)
+for ($i = 0; $i < strlen($str-1); $i++)
 {
     if ($i == 0)
     {
@@ -13,7 +13,7 @@ for ($i = 0; $i < strlen($str); $i++)
     }
     else if (substr($str, $i, 1) == substr($str, $i-1, 1))
     {
-        $nombre=+1;
+        $nombre+=1;
     }
     else
     {
@@ -21,7 +21,7 @@ for ($i = 0; $i < strlen($str); $i++)
         $nombre=1;
     }
 }
-$strRetour .= $nombre . "";
+$strRetour .= $nombre . $str[strlen($str)-1];
 echo $strRetour;
 ?>
 
